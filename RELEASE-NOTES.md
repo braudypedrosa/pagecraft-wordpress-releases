@@ -1,13 +1,9 @@
-Pagecraft WordPress 0.2.9
+Pagecraft WordPress 0.2.10
 
-Faster editor opening
+Header and footer styles after "Update site output"
 
-- The editor no longer waits for a check of where every image is used before it appears. That check reads every page, template and revision on the site, so it grew slower as a site was used. It now runs when the media library opens, which is the only place it is needed.
-- Until it finishes, no image can be deleted from the editor. WordPress still checks on the server before any delete.
-
-Pages list
-
-- Pagecraft pages show "— Pagecraft" after their title in WordPress Pages, the way WordPress marks the front page.
-- "Add New with Pagecraft" sits beside "Add Page".
+- Fixes headers losing their layout after "Update site output". Each updated template saved the shared base styles together with its own, and the footer's copy of the base styles then reset parts of the header.
+- Templates now keep their own styles in a separate file that loads after every base style, the same way pages do.
+- Templates saved the old way show "Update available" on Status. Run "Update site output" once after installing this release to repair them.
 
 Release validation requires hosted WordPress desktop/mobile acceptance for the packaged artifacts; local fixture and CI testing alone do not certify production hosting.
