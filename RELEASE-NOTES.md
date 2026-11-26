@@ -1,14 +1,13 @@
-Pagecraft WordPress 0.2.8
+Pagecraft WordPress 0.2.9
 
-Importer page
+Faster editor opening
 
-- Tools → Pagecraft Importer now uses the Pagecraft frame and shows what needs doing first.
-- Only checks that need attention are listed; the ones that pass fold into one line, with the full list behind "Show all".
-- Each product shows the installed and released versions side by side with a tick for the change, and the button says how many changes will run.
-- Switching theme, activating Builder and restoring the previous theme appear only when they apply.
+- The editor no longer waits for a check of where every image is used before it appears. That check reads every page, template and revision on the site, so it grew slower as a site was used. It now runs when the media library opens, which is the only place it is needed.
+- Until it finishes, no image can be deleted from the editor. WordPress still checks on the server before any delete.
 
-Theme Builder
+Pages list
 
-- Template thumbnails no longer log a blocked-script error in the browser console.
+- Pagecraft pages show "— Pagecraft" after their title in WordPress Pages, the way WordPress marks the front page.
+- "Add New with Pagecraft" sits beside "Add Page".
 
 Release validation requires hosted WordPress desktop/mobile acceptance for the packaged artifacts; local fixture and CI testing alone do not certify production hosting.
