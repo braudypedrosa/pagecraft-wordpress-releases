@@ -1,11 +1,11 @@
-Pagecraft WordPress 0.2.13
+Pagecraft WordPress 0.2.14
 
-Pages rebuilt in WordPress keep what the import gave them
+Safer imports, forms and private content
 
-- Images keep their smaller sizes. Saving a page or template, or running "Update site output", used to drop the link between an image and its media library item, so every screen downloaded the full-size file.
-- Breadcrumbs keep their "Home" crumb. WordPress rebuilds one page at a time and could not see the home page; it now uses the trail that came with the import.
-- A site that was just imported is no longer listed as "Update available" on Status. Pages are flagged once their output changes without a rebuild.
-
-Pages rebuilt before this release get their image sizes back the next time they are rebuilt or saved.
+- Imported pages now apply consistent safety checks to embedded resources and authored styles while preserving supported HTTPS embeds and forms.
+- Invalid public form requests are discarded before storage. Retained spam has its own request limit, retention window and storage cap.
+- Connecting Pagecraft Cloud is tied to the WordPress administrator and browser session that started it.
+- Delegated Pagecraft access respects WordPress page permissions, protected-page metadata stays private and invalid parent-page choices are rejected.
+- A page that only uses a video lightbox now loads the runtime it needs.
 
 Release validation requires hosted WordPress desktop/mobile acceptance for the packaged artifacts; local fixture and CI testing alone do not certify production hosting.
