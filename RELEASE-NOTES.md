@@ -1,9 +1,7 @@
-Pagecraft WordPress 0.2.10
+Pagecraft WordPress 0.2.11
 
-Header and footer styles after "Update site output"
+Header and the WordPress admin bar
 
-- Fixes headers losing their layout after "Update site output". Each updated template saved the shared base styles together with its own, and the footer's copy of the base styles then reset parts of the header.
-- Templates now keep their own styles in a separate file that loads after every base style, the same way pages do.
-- Templates saved the old way show "Update available" on Status. Run "Update site output" once after installing this release to repair them.
+- A header pinned to the top of the window no longer sits underneath the WordPress admin bar for signed-in users. Visitors were not affected and see no change.
 
 Release validation requires hosted WordPress desktop/mobile acceptance for the packaged artifacts; local fixture and CI testing alone do not certify production hosting.
