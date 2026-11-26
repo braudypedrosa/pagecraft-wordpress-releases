@@ -1,8 +1,11 @@
-Pagecraft WordPress 0.2.12
+Pagecraft WordPress 0.2.13
 
-Page caches after an update
+Pages rebuilt in WordPress keep what the import gave them
 
-- After Pagecraft Builder, Theme or Importer is updated, Pagecraft now clears page caches once. Before this, a cached site kept serving pages that pointed at the previous release's files until the cache expired or was purged by hand.
-- Works with LiteSpeed Cache, Cache Enabler, WP Rocket, W3 Total Cache, WP Super Cache and SiteGround Optimizer. Hosts with their own cache can listen for the `pagecraft_clear_page_caches` action.
+- Images keep their smaller sizes. Saving a page or template, or running "Update site output", used to drop the link between an image and its media library item, so every screen downloaded the full-size file.
+- Breadcrumbs keep their "Home" crumb. WordPress rebuilds one page at a time and could not see the home page; it now uses the trail that came with the import.
+- A site that was just imported is no longer listed as "Update available" on Status. Pages are flagged once their output changes without a rebuild.
+
+Pages rebuilt before this release get their image sizes back the next time they are rebuilt or saved.
 
 Release validation requires hosted WordPress desktop/mobile acceptance for the packaged artifacts; local fixture and CI testing alone do not certify production hosting.
