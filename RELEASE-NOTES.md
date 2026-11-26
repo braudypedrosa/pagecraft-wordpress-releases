@@ -1,11 +1,8 @@
-Pagecraft WordPress 0.2.14
+Pagecraft WordPress 0.2.15
 
-Safer imports, forms and private content
+Lighter pages after a rebuild
 
-- Imported pages now apply consistent safety checks to embedded resources and authored styles while preserving supported HTTPS embeds and forms.
-- Invalid public form requests are discarded before storage. Retained spam has its own request limit, retention window and storage cap.
-- Connecting Pagecraft Cloud is tied to the WordPress administrator and browser session that started it.
-- Delegated Pagecraft access respects WordPress page permissions, protected-page metadata stays private and invalid parent-page choices are rejected.
-- A page that only uses a video lightbox now loads the runtime it needs.
+- A page rebuilt in WordPress no longer downloads the same base styles twice. The header and footer shipped their own copy of styles the page's stylesheet already starts with; that copy is now skipped, saving about 30 KB of CSS per page.
+- Nothing changes visually. Pages with different base styles, and pages without a Pagecraft stylesheet of their own such as the 404 page, load exactly as before.
 
 Release validation requires hosted WordPress desktop/mobile acceptance for the packaged artifacts; local fixture and CI testing alone do not certify production hosting.
