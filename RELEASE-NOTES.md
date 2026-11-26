@@ -1,10 +1,14 @@
-Pagecraft WordPress 0.2.4
+Pagecraft WordPress 0.2.5
 
-Row menus on short tables
+Cloud: pick a project from the list
 
-- The "⋯" menu on a table row is no longer cut off when the table has only one or two rows. Pause, Delete, Mark as spam and the other row actions can be reached again in Theme Builder and Submissions.
-- The menu opens above its button when there is no room underneath, and closes when the page scrolls.
+- The Cloud screen now shows your projects as a list you pick from, with the page count beside each one, in place of a dropdown. The project your site was last replaced from is marked "On this site now".
+- Choosing what to replace (the whole site or one page) sits under the list as two cards, and "Review replacement" stays at the bottom of the same panel.
+- The connection status is plain text beside Disconnect.
 
-This is the first release that sites running 0.2.3 receive through the WordPress Updates screen.
+Spacing
+
+- Fields, labels and buttons in the Cloud forms and the New template dialog no longer touch each other; every gap between them is now even.
+- Radio buttons in those forms line up with their text on tablets.
 
 Release validation requires hosted WordPress desktop/mobile acceptance for the packaged artifacts; local fixture and CI testing alone do not certify production hosting.
