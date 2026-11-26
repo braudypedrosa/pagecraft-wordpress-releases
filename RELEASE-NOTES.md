@@ -1,10 +1,20 @@
-Pagecraft WordPress 0.2.16
+Pagecraft WordPress 0.2.17
 
-Undo the last Cloud replacement
+Faster editor opening
 
-- Pagecraft Cloud now shows the most recent replacement with an "Undo replacement" button. Undoing brings back the pages and templates that were there before, with their addresses, settings, home page and menus.
-- Pages the replacement added are archived, not deleted, and pages made by hand since are left alone.
-- The site is saved before an undo, so an undo can be reversed with "Redo replacement".
-- Only the most recent replacement can be undone. Replacements made before this release can be undone too, but show without the project name.
+- The editor is now kept by the browser between opens. It used to be downloaded in full every time; after the first open it loads from the browser's own copy, and a new release replaces it automatically.
+
+Undoing a replacement
+
+- The "Last replacement" line and "Undo replacement" now show whether or not Pagecraft Cloud is connected.
+- After a redo, the line shows when the site was first replaced.
+- Only the five most recent recovery records are kept.
+
+Smaller fixes
+
+- The entries export opens in Excel with accented names intact.
+- Notices from other plugins appear above the Pagecraft screen instead of inside its header.
+- Theme Builder says when templates are in the Trash and links to where they can be restored.
+- Translation templates are included for the Builder, Importer and Theme.
 
 Release validation requires hosted WordPress desktop/mobile acceptance for the packaged artifacts; local fixture and CI testing alone do not certify production hosting.
