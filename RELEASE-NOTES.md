@@ -1,8 +1,10 @@
-Pagecraft WordPress 0.2.15
+Pagecraft WordPress 0.2.16
 
-Lighter pages after a rebuild
+Undo the last Cloud replacement
 
-- A page rebuilt in WordPress no longer downloads the same base styles twice. The header and footer shipped their own copy of styles the page's stylesheet already starts with; that copy is now skipped, saving about 30 KB of CSS per page.
-- Nothing changes visually. Pages with different base styles, and pages without a Pagecraft stylesheet of their own such as the 404 page, load exactly as before.
+- Pagecraft Cloud now shows the most recent replacement with an "Undo replacement" button. Undoing brings back the pages and templates that were there before, with their addresses, settings, home page and menus.
+- Pages the replacement added are archived, not deleted, and pages made by hand since are left alone.
+- The site is saved before an undo, so an undo can be reversed with "Redo replacement".
+- Only the most recent replacement can be undone. Replacements made before this release can be undone too, but show without the project name.
 
 Release validation requires hosted WordPress desktop/mobile acceptance for the packaged artifacts; local fixture and CI testing alone do not certify production hosting.
